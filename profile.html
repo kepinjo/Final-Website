@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiFit Social</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .profile-header-img {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-header-img img {
+            border: 5px solid #fff;
+        }
+        .profile-header-img h3 {
+            margin-top: 10px;
+            color: #333;
+        }
+        .btn-edit-profile {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .btn-edit-profile:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            color: #333;
+        }
+        .card-body p {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+        .list-unstyled li {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .list-unstyled li i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-info">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.webp" class="img-fluid rounded-circle" style="width: 50px;" alt="">
+            ActiFit Social
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link " href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="profile.html">Profile</a>
+                <a class="nav-item nav-link " href="friends.html">Friends</a>
+                <a class="nav-item nav-link" href="login.html">Login</a>
+                <a class="nav-item nav-link" href="registrasi.html">Register</a>
+            </div>
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="profile-header-container">
+            <div class="profile-header-img">
+                <img src="images/foto.jpg" class="rounded-circle" style="width: 100px;height:95px;" alt="Avatar">
+                <h3>bluedrinkers Aja</h3>
+                <button class="btn btn-primary">Edit Profile</button>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Activity</h5>
+                        <p class="card-text">
+                            Activity: 0
+                        </p>
+                        <p class="card-text">Followers: 2</p>
+                        <p class="card-text">Following: 3</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Activity in Numbers</h5>
+                        <p>200 Steps</p>
+                        <p>20 Km</p>
+                        <p>150 KCal</p>
+                        <p>90 Mins</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <p>0 Steps</p>
+                        <p>12 Km</p>
+                        <p>40 KCal</p>
+                        <p>0 Mins</p>
+                        <p class="card-text">bersepeda di pagi hari</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mutual Friends</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-user-circle"></i> Peki Anto</li>
+                            <li><i class="fas fa-user-circle"></i> Kenzie Andrylie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row mb-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Activity Details</h5>
+                        <div class="activity-detail">
+                            <h6>Latest Achievements</h6>
+                            <p>🏆 Reached 10,000 steps in a day for the first time! A great milestone in the journey to better health.</p>
+                            <h6>Weekly Summary</h6>
+                            <ul>
+                                <li>🚴‍♂️ Biking: Covered a total distance of 50 km across 3 sessions.</li>
+                                <li>🏃 Running: Improved average pace to 5:30 min/km over 20 km.</li>
+                                <li>🧘 Yoga: Completed 4 sessions, focusing on flexibility and mindfulness.</li>
+                            </ul>
+                            <h6>Monthly Goals</h6>
+                            <p>Looking forward to achieving the following:</p>
+                            <ul>
+                                <li>Increase total running distance to 100 km.</li>
+                                <li>Participate in a local 5K run.</li>
+                                <li>Maintain a daily step count of at least 8,000 steps.</li>
+                            </ul>
+                            <h6>Words of Motivation</h6>
+                            <p>"Every step forward is a step towards achieving something bigger and better than your current situation." - Keep pushing your limits!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

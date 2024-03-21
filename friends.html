@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiFit Social</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .card-body {
+            padding: 1rem;
+        }
+        .card-title {
+            margin-bottom: 5px;
+        }
+        .card-text {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .friend-card {
+            margin-bottom: 20px;
+            transition: transform .2s;
+        }
+        .friend-card:hover {
+            transform: scale(1.03);
+        }
+        .icon-text {
+            display: flex;
+            align-items: center;
+        }
+        .icon-text i {
+            margin-right: 8px;
+        }
+        .badge {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.webp" class="img-fluid rounded-circle" style="width: 50px;" alt="">
+            ActiFit Social
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link " href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link " href="profile.html">Profile</a>
+                <a class="nav-item nav-link active" href="friends.html">Friends</a>
+                <a class="nav-item nav-link" href="login.html">Login</a>
+                <a class="nav-item nav-link" href="registrasi.html">Register</a>
+            </div>
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">My Friends</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card friend-card">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle profile-image mb-2" alt="Friend Name">
+                        <h5 class="card-title">Alex Johnson</h5>
+                        <p class="card-text icon-text"><i class="fas fa-heartbeat"></i>Fitness Enthusiast</p>
+                        <p class="card-text icon-text"><i class="fas fa-user-friends"></i>5 Mutual Friends</p>
+                        <p class="card-text icon-text"><i class="fas fa-running"></i>Recently ran a marathon</p>
+                        <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card friend-card">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle profile-image mb-2" alt="Friend Name">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text icon-text"><i class="fas fa-heartbeat"></i>Yoga Lover</p>
+                        <p class="card-text icon-text"><i class="fas fa-user-friends"></i>3 Mutual Friends</p>
+                        <p class="card-text icon-text"><i class="fas fa-running"></i>Enjoys hiking</p>
+                        <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-md-4">
+                <div class="card friend-card">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle profile-image mb-2" alt="Friend Name">
+                        <h5 class="card-title">Emily Smith</h5>
+                        <p class="card-text icon-text"><i class="fas fa-heartbeat"></i>Gym Addict</p>
+                        <p class="card-text icon-text"><i class="fas fa-user-friends"></i>7 Mutual Friends</p>
+                        <p class="card-text icon-text"><i class="fas fa-running"></i>Loves kickboxing</p>
+                        <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card friend-card">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle profile-image mb-2" alt="Friend Name">
+                        <h5 class="card-title">Michael Brown</h5>
+                        <p class="card-text icon-text"><i class="fas fa-heartbeat"></i>Outdoor Adventurer</p>
+                        <p class="card-text icon-text"><i class="fas fa-user-friends"></i>8 Mutual Friends</p>
+                        <p class="card-text icon-text"><i class="fas fa-running"></i>Recently climbed Mt. Everest</p>
+                        <a href="#" class="btn btn-primary btn-sm">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

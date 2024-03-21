@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiFit Social</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-info">
+
+    <div class="container my-5 card p-5">
+        <h2>Form Registrasi Akun ActiFit Social</h2>
+        <hr>
+        <form method="POST" action="" id="registrationForm" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="namaDepan">Nama Depan:</label>
+                        <input type="text" class="form-control" id="namaDepan" name="namaDepan" minlength="3">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="namaBelakang">Nama Belakang:</label>
+                        <input type="text" class="form-control" name="namaBelakang" id="namaBelakang" minlength="3">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="tanggalLahir">Tanggal Lahir:</label>
+                <input type="date" class="form-control" name="tanggalLahir" id="tanggalLahir">
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin:</label><br>
+                <input type="radio" id="lakiLaki" name="jenisKelamin" value="L">
+                <label for="lakiLaki">Laki-Laki</label><br>
+                <input type="radio" id="perempuan" name="jenisKelamin" value="P">
+                <label for="perempuan">Perempuan</label>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea class="form-control" name="alamat" id="alamat"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="fotoProfil">Upload Foto Profil:</label>
+                <input type="file" class="form-control-file" name="fotoProfil" id="fotoProfil">
+            </div>
+            <div class="form-group">
+                <label for="nomorTelepon">Nomor Telepon:</label>
+                <input type="number" class="form-control" name="nomorTelepon" id="nomorTelepon" pattern="\d*">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="password">Kata Sandi:</label>
+                        <input type="password" class="form-control" name="password" id="password" minlength="8">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="confirmPassword">Konfirmasi Kata Sandi:</label>
+                        <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" minlength="8">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="submit" class="w-100 btn btn-primary">Registrasi</button>
+        </form>
+        <br><br>
+        <div class="d-flex justify-content-center">
+            <span>Sudah Mempunyai Akun? <a href="login.html">Login Disini</a></span>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#registrationForm').submit(function(e) {
+                e.preventDefault();
+
+                var valid = true;
+                var errorMessage = '';
+                var formData = new FormData(this);
+
+                if ($('#namaDepan').val().length < 3 || $('#namaBelakang').val().length < 3) {
+                    errorMessage = 'Nama Depan dan Nama Belakang minimal 3 karakter';
+                    valid = false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#email').val())) {
+                    errorMessage = 'Format email tidak valid';
+                    valid = false;
+                } else if (!$("input[name='jenisKelamin']:checked").val()) {
+                    errorMessage = 'Jenis Kelamin harus dipilih';
+                    valid = false;
+                } else if ($('#alamat').val().trim() === '') {
+                    errorMessage = 'Alamat harus diisi';
+                    valid = false;
+                } else if ($('#fotoProfil').get(0).files.length === 0) {
+                    errorMessage = 'Foto Profil harus diupload';
+                    valid = false;
+                } else if ($('#nomorTelepon').val().trim() === '' || !$.isNumeric($('#nomorTelepon').val())) {
+                    errorMessage = 'Nomor Telepon harus diisi dengan angka';
+                    valid = false;
+                } else if ($('#password').val() !== $('#confirmPassword').val() || $('#password').val().length < 8) {
+                    errorMessage = 'Kata Sandi dan Konfirmasi Kata Sandi harus sama dan minimal 8 karakter';
+                    valid = false;
+                }
+
+                if (valid) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Registrasi berhasil!',
+                        text: 'Anda akan diarahkan ke halaman login.',
+                    }).then((result) => {
+                        window.location.href = 'login.html';
+                    });
+                } else {
+                    Swal.fire('Error', errorMessage, 'error');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
